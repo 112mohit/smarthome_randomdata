@@ -1,0 +1,110 @@
+<div class="row">
+    <h5>Restaurant Light Control</h5>
+</div>
+<div class="row">
+    <div class="col-6">
+        <h6>Table 1</h6>
+        <div class="col-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <b>Starter</b>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm" (click)="toggleLight('table1', 'starter')" [ngClass]="types['table1']['starter'] ? 'btn-danger' : 'btn-info'">
+                                {{types['table1']['starter'] ? 'Off' : 'On'}}
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <b>Main Course</b>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm" (click)="toggleLight('table1','maincourse')" [ngClass]="types['table1']['maincourse'] ? 'btn-danger' : 'btn-info'">
+                                {{types['table1']['maincourse'] ? 'Off' : 'On'}}
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <b>Dessert</b>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm" (click)="toggleLight('table1','dessert')" [ngClass]="types['table1']['dessert'] ? 'btn-danger' : 'btn-info'">
+                                {{types['table1']['dessert'] ? 'Off' : 'On'}}
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-12">
+            <b>Currently Serving:</b>
+            <span>{{ current['table1'] ? current['table1'] : 'nothing' }}</span>
+        </div>
+    </div>
+
+
+    <div class="col-6">
+        <h6>Table 2</h6>
+        <div class="col-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <b>Starter</b>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm" (click)="toggleLight('table2', 'starter')" [ngClass]="types['table2']['starter'] ? 'btn-danger' : 'btn-info'">
+                                {{types['table2']['starter'] ? 'Off' : 'On'}}
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <b>Main Course</b>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm" (click)="toggleLight('table2','maincourse')" [ngClass]="types['table2']['maincourse'] ? 'btn-danger' : 'btn-info'">
+                                {{types['table2']['maincourse'] ? 'Off' : 'On'}}
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <b>Dessert</b>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm" (click)="toggleLight('table2','dessert')" [ngClass]="types['table2']['dessert'] ? 'btn-danger' : 'btn-info'">
+                                {{types['table2']['dessert'] ? 'Off' : 'On'}}
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-12">
+            <b>Currently Serving:</b>
+            <span>{{ current['table2'] ? current['table2'] : 'nothing' }}</span>
+        </div>
+    </div>
+
+</div>

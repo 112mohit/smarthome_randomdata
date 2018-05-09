@@ -1,0 +1,89 @@
+<div class="row">
+    <h5>Sensor Data</h5>
+</div>
+<div class="row">
+    <div class="col-6">
+        <ngx-gauge [type]="temperatureGuage.gaugeType" [thick]="10" [value]="temperatureGuage?.gaugeValue" [label]="temperatureGuage.gaugeLabel"
+            [duration]="1000" [append]="temperatureGuage.gaugeAppendText">
+        </ngx-gauge>
+    </div>
+    <div class="col-6">
+        <ngx-gauge [type]="humidityGuage.gaugeType" [thick]="10" [value]="humidityGuage?.gaugeValue" [label]="humidityGuage.gaugeLabel"
+            [duration]="1000" [append]="humidityGuage.gaugeAppendText">
+        </ngx-gauge>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h5>Appliances</h5>
+    </div>
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <b>TV</b>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm" (click)="setTV()" [ngClass]="tv ? 'btn-danger' : 'btn-info'">
+                            {{tv ? 'Off' : 'On'}}
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>Light</b>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm" (click)="setLight()" [ngClass]="light ? 'btn-danger' : 'btn-info'">
+                            {{light ? 'Off' : 'On'}}
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>Heating</b>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm" (click)="setHeating()" [ngClass]="heating ? 'btn-danger' : 'btn-info'">
+                            {{heating ? 'Off' : 'On'}}
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>AC</b>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm" (click)="setAc()" [ngClass]="ac ? 'btn-danger' : 'btn-info'">
+                            {{ac ? 'Off' : 'On'}}
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12">
+        <h5>History Data
+            <button type="button" (click)="getHistortData()" class="btn btn-info btn-sm">Refresh</button>
+        </h5>
+    </div>
+    <div class="col-12">
+        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="true" [chartType]="'line'"></canvas>
+        <br/>
+    </div>
+
+</div>

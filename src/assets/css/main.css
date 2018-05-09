@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+a:focus,
+.btn:focus {
+    outline: none;
+    outline-offset: 0px;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+.paddingRt-0 {
+    padding-right: 0;
+}
+
+.paddingLt-0 {
+    padding-left: 0;
+}
+
+.orng-hed {
+    color: #e3ae22;
+}
+
+.cpu-panel-hed {
+    background: #626262;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.cpu-panel-hed p {
+    color: #e5e5e5;
+    font-size: 13px;
+}
+
+.cpu-panel-body {
+    padding: 15px;
+}
+
+.box {
+    border: 1px solid #e2e2e2;
+    padding: 10px;
+}
+
+.box-no-padding {
+    border: 1px solid #e2e2e2;
+    padding: 0 !important;
+}

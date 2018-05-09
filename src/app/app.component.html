@@ -1,0 +1,12 @@
+<header-bar *ngIf="isLoggedIn"></header-bar>
+<section class="main-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</section>
+<footer-bar></footer-bar>
+<ng-snotify class="material"></ng-snotify>

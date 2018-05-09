@@ -1,0 +1,36 @@
+<!-------------Header------------>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" [routerLink]="['home']">SmartHome</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" [routerLinkActive]="['active']">
+                    <a class="nav-link" [routerLink]="['room','room1']">Room 1</a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['active']">
+                    <a class="nav-link" [routerLink]="['room','room2']">Room 2</a>
+                </li>
+
+                <li class="nav-item" [routerLinkActive]="['active']" *ngIf="isAdmin">
+                    <a class="nav-link" [routerLink]="['users']">Users</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" [routerLinkActive]="['active']">
+                    <a class="nav-link" [routerLink]="['restaurant']">Restaurant</a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['active']">
+                    <a class="nav-link" [routerLink]="['change-password']">Change Password</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="logOut()">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
