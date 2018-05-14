@@ -111,4 +111,4 @@ function addSensorData(room) {
 setInterval(function () {
     addSensorData('room1');
     addSensorData('room2');
-}, (60000 * 2));
+}, (60000 * 10));
