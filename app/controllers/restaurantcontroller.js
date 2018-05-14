@@ -36,7 +36,7 @@ function handleError(res, message) {
 exports.toggleLight = function (req, res) {
     var typePin = types[req.params.table][req.params.type];
     var on = req.params.on == 'true';
-    res.status(200).json(req.params.type + ' is now ' + (on ? 'on' : 'off'));
+    res.status(200).json(req.params.type + ' is now ' + (on ? 'getting ready' : 'on hold'));
 
     // for (var key in types[req.params.table]) {
     //     if (key !== req.params.type) {
